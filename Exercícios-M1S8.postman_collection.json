@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "5cd81020-7e36-4b47-bad7-f1c87e1cedae",
+		"name": "Exercícios M1S8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9297901",
+		"_collection_link": "https://www.postman.com/moralbusiness/workspace/fullstack/collection/9297901-5cd81020-7e36-4b47-bad7-f1c87e1cedae?action=share&source=collection_link&creator=9297901"
+	},
+	"item": [
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/cursos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cursos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Fullstack 1\",\n    \"descricao\": \"Curso 1\",\n    \"cargaHoraria\": 301\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cursos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/cursos/:id/add-aluno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cursos/1/add-aluno",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cursos",
+								"1",
+								"add-aluno"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "alunos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/alunos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alunos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Leandro\",\n    \"dataNascimento\": \"1990-03-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/alunos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
